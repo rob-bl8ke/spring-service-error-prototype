@@ -61,8 +61,6 @@ Access the test endpoint:
 GET http://localhost:8080/documents/{id}
 ```
 
----
-
 ## 🧪 Running Tests
 
 ### Unit Tests
@@ -74,8 +72,7 @@ mvn test -Dtest=DocumentServiceTest
 ```bash
 mvn test -Dtest=DocumentServiceIntegrationTest
 ```
-
----
+>IMPORTANT: You must have Docker or some compatible container engine running.
 
 ## ✅ Features Demonstrated
 - DTO parsing for both success and error cases
