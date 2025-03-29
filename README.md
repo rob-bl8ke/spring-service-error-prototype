@@ -9,18 +9,16 @@ A Spring Boot microservice prototype that fetches documents from a downstream se
 
 ## ⚙️ Configuration
 
-Set the downstream base URL in `application.yml`:
+Set the downstream base URL in `application-local.yml`. This will be used with manual tools like [Mockoon](https://mockoon.com/) or [`httpYac`](https://httpyac.github.io/guide/installation_vscode.html). When running the integration tests, the `MockServerContainerInitializer` will override the settings for downstream services in order to test on its own host and port.
 
 ```yaml
 downstream:
   base-url: http://localhost:3001
 ```
 
-Testcontainers will override this automatically during integration tests.
-
 ### VS Code
 
-`launch.json`
+`launch.json` not only configures the application for debugging, but note how it sets the active profile so that you always launch using the local profile.
 
 ```json
 {
